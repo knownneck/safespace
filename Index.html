@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>PERSONNEL IDENTIFICATION-TEST RUN</title>
+</head>
+<body>
+    <h1>Security Identification System (TEST RUN)</h1>
+    <p>Data and images provided must be concise as to avoid access denial</p>
+
+    <form id="myform" action="https://formspree.io/f/xoqgrgke" method="POST" enctype="multipart/form-data">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" /><br /><br />
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" /><br /><br />
+
+        <label for="idFront">ID Card Front:</label>
+        <input type="file" id="idFront" name="idFront" accept="image/*" capture="environment"><br /><br />
+
+        <label for="idBack">ID Card Back:</label>
+        <input type="file" id="idBack" name="idBack" accept="image/*" capture="environment"><br /><br />
+
+        <label for="faceVideo">Face Video:</label>
+        <input type="file" id="faceVideo" name="faceVideo" accept="video/*" capture><br /><br />
+
+        <input type="submit" value="Submit" />
+    </form>
+    <div id="result"></div>
+    <script>
+        function displayInput() {
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+
+            document.getElementById('result').innerHTML = 'Hello, ' + firstName + ' ' + lastName;
+        }
+    </script>
+</body>
+</html>
